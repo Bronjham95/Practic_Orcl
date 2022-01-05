@@ -29,11 +29,6 @@ PROMPT = Define complete
 PROMPT = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 PROMPT 
 
-connect &&usr_kais./&&usr_kais_pwd.@&&tnsname.
-
-column start_time new_value file_time noprint
-select to_char(SYSDATE,'yyyymmdd_hh24miss') as start_time from dual;
-
 set head off
 set linesize 500
 set pagesize 0
@@ -44,6 +39,11 @@ set wrap off
 create table tmp_armiv27366_bid (bid varchar2(5), is_processed number(1), log_records number);
 
 create table tmp_armiv27366_log (bid varchar2(5), contract_id  varchar2(50), version  number, add_agreement_id varchar2(50), record_date  date, file_name varchar2(100), is_processed number);
+
+PROMPT = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+PROMPT = Table complete
+PROMPT = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+PROMPT 
 
 set serveroutput on
 
